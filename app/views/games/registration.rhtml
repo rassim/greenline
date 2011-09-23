@@ -15,4 +15,12 @@
   <br /><br />
   <%= link_to 'Please use this link to register for the game', :controller => 'games', :action => 'registerplayer', :gameid => @game.id %>
 
+  <br /><br />
+  
+  <%  unless session[:msg].blank? %>
+  <%=  session[:msg] %>
+  <% session[:msg] = '' %>
+  <%  end  %>
+  
+
 <% end %>

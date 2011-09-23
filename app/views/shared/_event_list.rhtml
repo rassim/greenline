@@ -1,0 +1,29 @@
+<table class="lots-list">
+<tr>
+  <th class="name">Player</th>
+  <th class="name">Name</th>
+  
+  <th class="location">Event</th>
+  <th class="location">Actions</th>
+</tr>
+
+<% gevents.each do |ev| %>
+<tr>
+  <td><%= ev.id %></td>
+  <td><%=  ev.user.name1 %>  <%=  ev.user.name2 %></td>
+ 
+  <td><%= ev.event.name  %></td>
+  
+  <td class="action">
+    <%= link_to 'Edit', :controller => 'games', :action => 'addevents', :id => game.id, :uid => ev.id %>
+    ...
+    <%= link_to 'Delete', :controller => 'games', :action => 'addevents', :id => game.id, :evid => ev.id %>
+  </td>
+
+  
+</tr>
+<% end %>
+
+
+
+</table>

@@ -10,8 +10,18 @@
   <%= password_field 'user', 'password_confirmation', :class => 'long-input'%>
   <br />
   
+  <label>First Name</label>
+  <%= text_field 'user', 'name1', :class => 'long-input' %>
+  <label>Second Name</label>
+  <%= text_field 'user', 'name2', :class => 'long-input' %>
+
   <label>e-mail</label>
   <%= text_field 'user', 'email', :class => 'long-input' %>
+
+  <label>phone</label>
+  <%= text_field 'user', 'phone', :class => 'long-input' %>
+
+
   
   <label>Nickname</label>
   <%= text_field 'user', 'nick', :class => 'long-input' %>

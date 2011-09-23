@@ -89,6 +89,7 @@ class GamesController < ApplicationController
 
   def registration
     @game = Game.find( params[:id])
+    @xmessage = params[:mess]
     
     #@registr = Registration.find(:all, :conditions => {:game_id => @game.id});
     @registr1 = Registration.find(:all, :conditions => {:game_id => @game.id, :team_id => 1});
@@ -96,16 +97,30 @@ class GamesController < ApplicationController
   end
 
 
+  def addevents
+    @game = Game.find( params[:id])
+    @xmessage = params[:mess]
+
+    @gevents = Gameevent.find(:all, :conditions => {:game_id => @game.id})
+    
+  end
+
+
   def registerplayer
     xgame_id = params[:gameid]
     xuser_id = session[:user_id]
-
-    @xreg = Registration.find(:all, :conditions => {:game_id => xgame_id, user_id => xuser_id})
     
+    xreg = Registration.find(:all, :conditions => {:game_id => xgame_id, :user_id => xuser_id})
 
-    @reg = Registration.create(:game_id => xgame_id, :user_id=>xuser_id, :team_id=>1)
-    
-    redirect_to :controller => 'games', :action => 'registration', :id => xgame_id
+    unless xreg.blank?
+      redirect_to :controller => 'games', :action => 'registration', :id => xgame_id
+      session[:msg] = 'Registration record already exists !?!'
+    else
+      @reg = Registration.create(:game_id => xgame_id, :user_id=>xuser_id, :team_id=>1)
+      redirect_to :controller => 'games', :action => 'registration', :id => xgame_id
+      session[:msg] = 'You have been registered for the game !!!'
+    end
+
   end
 
 
@@ -121,6 +136,9 @@ class GamesController < ApplicationController
        user.update_attribute(:totgoal, xgoal)
        xassi = Gameevent.count(:all, :conditions => {:user_id => user.id, :event_id => 2})
        user.update_attribute(:totassi, xassi)
+       
+       xgames = Registration.count(:all, :conditions => {:user_id => user.id})
+       user.update_attribute(:totgame, xgames)
 
        xga = xgoal+xassi
        user.update_attribute(:totga, xga)

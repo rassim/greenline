@@ -7,7 +7,7 @@ class AuthController < ApplicationController
   end
   
   def create_user
-    params[:user][:enabled] = false
+    params[:user][:enabled] = true
     @user = User.create(params[:user])
     if @user.valid? then
       @user.online = Time.now

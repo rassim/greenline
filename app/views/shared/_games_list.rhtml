@@ -23,8 +23,11 @@
     <%= link_to 'Edit', :controller => 'games', :action => 'edit', :id => game.id %>
 
     <% if(game.done == 0) %>
-      ...
-      <%= link_to 'Registration', :controller => 'games', :action => 'registration', :id => game.id %>
+          ...
+          <%= link_to 'Registration', :controller => 'games', :action => 'registration', :id => game.id %>
+      <% else %>
+          ...
+          <%= link_to 'Add events', :controller => 'games', :action => 'addevents', :id => game.id %>
      <% end %>
   </td>
 

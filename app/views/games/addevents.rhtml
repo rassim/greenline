@@ -1,0 +1,26 @@
+<% content_for :content do %>
+
+  <h2>
+    Game:<%=  @game.id %> Add events page
+    <br />
+    Game date: <%=  @game.gamedate %>
+    <br />
+  </h2>
+  <br /><br />
+
+  <%= render :partial => 'shared/event_list', :locals => { :gevents => @gevents, :game => @game}%>
+<br /><br />
+
+  
+  <br /><br />
+  <%= link_to 'Please use this link to add game events', :controller => 'games', :action => 'addevents', :gameid => @game.id %>
+
+  <br /><br />
+  
+  <%  unless session[:msg].blank? %>
+  <%=  session[:msg] %>
+  <% session[:msg] = '' %>
+  <%  end  %>
+  
+
+<% end %>

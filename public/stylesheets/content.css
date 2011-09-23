@@ -1,0 +1,113 @@
+input.auth { border: 1px solid #EDEBD5; font: bold 100% "Trebuchet MS", Arial, Helvetica, sans-serif; width: 90%; }
+input.button {
+  background: #FFFFFF url('/images/img03.gif') repeat-x left bottom;
+  border: 1px solid #EDEBD5;
+  font: bold 100% "Trebuchet MS", Arial, Helvetica, sans-serif;
+  color: #7F7772;
+	padding : 3px;
+}
+.error { color: #A50000; }
+
+input.button2 {
+  background: #FFFFFF url('/images/img03.gif') repeat-x left bottom;
+  border: 5px solid #EDEBD5;
+  font: bold 100% "Trebuchet MS", Arial, Helvetica, sans-serif;
+  color: #7F7772;
+	padding : 3px;
+}
+	
+input.long-input  { border: 1px solid #EDEBD5; font: bold 100% "Trebuchet MS", Arial, Helvetica, sans-serif; width: 520px; color: #7F7772; }
+input.short-input { border: 1px solid #EDEBD5; font: bold 100% "Trebuchet MS", Arial, Helvetica, sans-serif; width: 90px; color: #7F7772;}
+input.medium-input { border: 1px solid #EDEBD5; font: bold 100% "Trebuchet MS", Arial, Helvetica, sans-serif; width: 160px; color: #7F7772;}
+input.tiny-input { border: 1px solid #EDEBD5; font: bold 100% "Trebuchet MS", Arial, Helvetica, sans-serif; width: 50px; color: #7F7772;}
+
+textarea.long-input {
+  border: 1px solid #EDEBD5; font: bold 100% "Trebuchet MS", Arial, Helvetica, sans-serif; width: 520px; color: #7F7772;
+  height: 80px;
+}
+
+label  { display: block; margin-top: 5px; margin-bottom: 1px; }
+
+.fieldWithErrors input, .fieldWithErrors textarea, .fieldWithErrors select { border: 1px solid #A50000; }
+ul.auto-complete li { margin: 0px; padding: 0px; height: 15px; }
+
+
+.lots-list { width: 100%; padding: 3px; font-size: 11px; font-family: Arial, sans-serif;}
+.lots-list th { text-align: left;  border: 1px dotted; padding: 3px;}
+.lots-list td { text-align: left;  border: 1px dotted; padding: 3px; vertical-align: top;} 
+.lots-list .name     { width: 200px; }
+.lots-list .event    { width: 220px; }
+.lots-list .number   { width: 20px;}
+.lots-list .owner    { width: 50px; }
+.lots-list .location { width: 120px; }
+.lots-list .status   { width: 150px; }
+.lots-list .time     { width: 100px;}
+.lots-list .action   { width: 200px;}
+
+
+#lot-eventsras {
+  width: 500px;
+  height: 200px;
+  overflow: auto;
+  border: 1px  solid #CDEBD5;
+  margin-bottom: 10px;
+  padding-left: 0px;
+  font-size: 12px;
+  text-align: left;
+  font-family:  Tahoma, Verdana, Arial, sans-serif;
+}
+
+#lot-eventsras ul    { list-style-type: none; line-height: 110%; padding: 10px;}
+#lot-eventsras ul li { margin: 1px; padding: 1px; }
+
+
+#lot-events {
+  width: 500px;
+  height: 300px;
+  overflow: auto;
+  border: 1px  solid #EDEBD5;
+  margin-bottom: 10px;
+  padding-left: 0px;
+  font-size: 12px;
+  text-align: left;
+  font-family:  Tahoma, Verdana, Arial, sans-serif;
+}
+
+#lot-events ul    { list-style-type: none; line-height: 110%; padding: 10px;}
+#lot-events ul li { margin: 1px; padding: 1px; }
+
+#lot-dialog {
+  width: 500px;
+  height: 300px;
+  overflow: auto;
+  border: 1px  solid #EDEBD5;
+  margin-bottom: 10px;
+  padding-left: 0px;
+  font-size: 12px;
+  text-align: left;
+  font-family:  Tahoma, Verdana, Arial, sans-serif;
+}
+
+#lot-dialog ul    { list-style-type: none; line-height: 110%; padding: 10px;}
+#lot-dialog ul li { margin: 1px; padding: 1px; }
+
+
+
+#lot-description { margin-bottom: 10px; font-style: italic;}
+
+#lot-state { height: 100px; width: 250px; font-size: 16px; font-weight: bold; float: right; margin-right: 10px;}
+
+#lot-confirm { height: 100px; width: 250px; font-size: 16px; font-weight: bold; float: right; margin-right: 10px;}
+
+#price-input { width: 500px;}
+
+#interest-tree { width: 530px; height: 250px; border: 1px solid #EDEBD5;  }
+#lot-products-tree { width: 520px; height: 200px;  }
+
+.online { color: #2c864e;}
+
+#messages-list { border: 1px solid #EDEBD5; width: 700px; height: 300px; overflow: auto; vertical-align: top;}
+#message-view { width: 690px; height: 300px; overflow: auto; border: 1px solid #EDEBD5; margin-top: 20px; padding: 5px;}
+
+
+

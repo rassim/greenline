@@ -1,0 +1,117 @@
+.editor {
+	font-family: "Lucida Grande", Arial, sans-serif;
+  font-size: 12px;
+}
+
+.editor label {
+  display: block;
+  font-family: "Lucida Grande", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  margin-top: 8px;
+  margin-bottom: 1px;
+}
+
+.editor input[type="text"], .editor textarea {
+  border: 1px solid #A0A0A0;
+	padding: 1px;
+  font-size: 12px;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+
+.editor .small-input { width: 70px; }
+.editor .long-input  { width: 260px; }
+.editor .short-text  { height: 10em; width: 260px; }
+
+.destroy { font-family: "Lucida Grande", Arial, sans-serif; font-size: 12px; font-weight: bold; color: #A00000; }
+
+.editor .show-info-link {
+  font-family: "Lucida Grande", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #A0A0A0;
+}
+
+.submit {
+  padding: 0px 5px;
+}
+
+ul.tree {
+  margin-left: 5px;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 12px;
+}
+
+ul .tree li  {
+  margin: 1px 0px;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 12px;
+}
+
+ul .tree li label {
+  margin-left: 1px;
+}
+
+.editor fieldset {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #99bbe8;
+}
+
+.editor legend {
+  font-family: "Lucida Grande", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #303030;
+}
+
+
+ul.tree ul {
+  margin-left: 15px;
+}
+
+.item-photo-preview {
+  display: block;
+  margin-left: 10px;
+  border: 1px solid black;
+}
+
+#content {
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+
+.rich-editor {
+  margin-bottom: 10px;
+  height: 250px;
+}
+
+.small-plain-editor {
+  height: 80px;
+  width: 600px;
+}
+.plain-editor {
+  height: 300px;
+  width: 600px;
+}
+
+.info {
+  margin-bottom: 20px;
+}
+
+.info td {
+  vertical-align: top;
+  padding: 0px 10px;
+  font-family: "Lucida Grande", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.note {
+  font-family: "Lucida Grande", Arial, sans-serif;
+	font-size: 11px;
+}
+
+.online { color: #2c864e; font-weight: bold;}

@@ -1,0 +1,25 @@
+<% content_for :content do %>
+<h2><%= @greeting.title%></h2>
+<%= @greeting.content%>
+
+<br/>
+
+<% if @user.blank? %>
+<br />
+    <h2>Please use this information to log in...</h2>
+    <%= render :partial => 'shared/users_list', :locals => { :users => @users } %>
+<% end %>
+
+
+<% unless @user.blank? %>
+
+    <br />
+    <h2>All games</h2>
+    <br />
+    active user id: <%= @user.id %>
+    <br />
+    <%= render :partial => 'shared/games_list', :locals => {:games => @games, :auser =>@user } %>
+
+<% end %>
+
+<% end %>

@@ -1,0 +1,14 @@
+<% unless @user.blank? %>
+<h2>Available functions</h2>
+<ul>
+
+  <li><%= link_to_if @section != "games/viewteams",'View teams', :controller => 'games', :action => 'viewteams' %></li>
+
+  <li><%= link_to_if @section != "games/stats",'View players', :controller => 'games', :action => 'viewusers' %></li>
+  <li><%= link_to_if @section != "games/stats",'View statistics', :controller => 'games', :action => 'stats' %></li>
+  <li><%= link_to_if @section != "games/games", 'View games',     :controller => 'games', :action => 'viewgames' %></li>
+  <li><%= link_to_if @section != "games/newgame", 'Create new game', :controller => 'games', :action => 'newgame' %></li>
+
+  <br />
+</ul>    
+<% end %>

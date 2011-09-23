@@ -1,0 +1,30 @@
+<% if @user.blank? %>
+<h2>Login</h2>
+<% form_tag(:controller => 'auth', :action => 'login') do %>
+  <%= text_field     'user', 'login',    :class => 'auth' %>
+  <%= password_field 'user', 'password', :class => 'auth' %>
+  <%= submit_tag 'Ok', :class => 'button' %>
+  <div class="error"><%= flash[:auth_error] %></div>
+  <%= link_to 'New user registration', :controller => 'auth', :action => 'register' %>
+  
+  <%= periodically_call_remote(
+     :url         => { :controller => 'auth', :action => 'online_users'},
+     :frequency   => 30
+   )%>
+<% end %>  
+
+<% else %>
+  You logged in as: <b><%= @user.nick %></b><br />
+  <%= link_to 'Log out', :controller => 'auth', :action => 'logout' %>
+  <%= periodically_call_remote(
+    :url         => { :controller => 'auth', :action => 'online'},
+    :frequency   => 30
+  )%>
+<% end %>
+<br>
+
+<!--
+<div id="num-online-users">
+  <%= render :partial => 'auth/online_users'%>
+</div>
+-->

@@ -1,0 +1,24 @@
+<% form_remote_tag( :url => { :controller => 'auth', :action => 'create_user' }, :update => 'register-form' ) do %>
+  <div>
+  <label>Login</label>
+  <%= text_field 'user', 'login', :class => 'long-input' %>
+  
+  <label>Password</label>
+  <%= password_field 'user', 'password', :class => 'long-input' %>
+  
+  <label>Password(confirm)</label>
+  <%= password_field 'user', 'password_confirmation', :class => 'long-input'%>
+  <br />
+  
+  <label>e-mail</label>
+  <%= text_field 'user', 'email', :class => 'long-input' %>
+  
+  <label>Nickname</label>
+  <%= text_field 'user', 'nick', :class => 'long-input' %>
+  
+  <label>Contact info</label>
+  <%= text_area 'user', 'description', :class => 'long-input'%>
+  </div>
+  <br />
+  <%= submit_tag 'Submit', :class => 'button' %>
+<% end %>  

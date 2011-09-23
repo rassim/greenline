@@ -1,0 +1,38 @@
+<table class="lots-list">
+<tr>
+  <th class="number">NN</th>
+  <th class="location">Gamedate</th>
+  <th class="name">Team 1</th>
+  <th class="name">Team 2</th>
+  <th class="location">Result</th>
+  <th class="location">Actions</th>
+</tr>
+
+<% games.each do |game| %>
+<tr>
+  <td><%= game.id %></td>
+  <td><%= game.gamedate %></td>
+  <td><%= team_desc(game.team1_id) %></td>
+  <td><%= team_desc(game.team2_id) %></td>
+  <td>
+    <%= game.final_score1 %> : <%= game.final_score2 %>  (<%= game.half_score1 %> : <%= game.half_score2 %>)
+  </td>
+
+  <td class="action">
+   
+    <%= link_to 'Edit', :controller => 'games', :action => 'edit', :id => game.id %>
+
+    <% if(game.done == 0) %>
+      ...
+      <%= link_to 'Registration', :controller => 'games', :action => 'registration', :id => game.id %>
+     <% end %>
+  </td>
+
+ 
+
+  
+</tr>
+<% end %>
+
+</table>
+

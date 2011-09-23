@@ -1,0 +1,7 @@
+<% content_for :content do %>
+
+  <h2>All games:</h2>
+  <br />
+  <%= render :partial => 'shared/games_list', :locals => { :games => @games}%>
+  
+<% end %>

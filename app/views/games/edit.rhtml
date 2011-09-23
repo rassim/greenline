@@ -1,0 +1,47 @@
+<% content_for :content do %>
+  <h2>Edit Game</h2>
+  <br />
+  
+  <div id="new-lot-form">
+    <%= render :partial => 'editgameform', :locals => { :game => @selectedgame }%>
+  </div>
+  
+  <script type="text/javascript">
+    var controllerInfo = <%= @controller_info.to_json %>;
+    var lotProductsWindow, lotLocationsWindow;
+    Ext.onReady(function(){
+      lotProductsWindow  = new Exchange.LotProductsWindow();
+      lotLocationsWindow = new Exchange.LotLocationsWindow();
+      
+      datePickerController.createDatePicker({ formElements:{"lot_start_at_date" : "d-ds-M-ds-Y"}});
+      datePickerController.createDatePicker({ formElements:{"lot_stop_at_date"  : "d-ds-M-ds-Y"}});
+      //datePickerController.createDatePicker({ formElements:{"lot_active_trade_start_at_date"  : "d-ds-M-ds-Y"}});
+      datePickerController.createDatePicker({ formElements:{"lot_ship_start_at_date"  : "d-ds-M-ds-Y"}});
+      datePickerController.createDatePicker({ formElements:{"bid_paydate"  : "d-ds-M-ds-Y"}});
+    });  
+    
+  </script>
+
+<% end %>  
+
+ 
+
+<% content_for :header do %>
+
+<%= javascript_include_tag "/extjs/adapter/prototype/ext-prototype-adapter.js"%>
+<%= javascript_include_tag "/extjs/ext-all.js" %>
+<%= javascript_include_tag 'ext_init.js' %>
+<%= stylesheet_link_tag    "/extjs/resources/css/ext-all.css" %>
+
+
+<%= javascript_include_tag 'site/general_tree.js' %>
+<%= javascript_include_tag 'site/lot_products_tree.js' %>
+<%= javascript_include_tag 'site/lot_products_window.js' %>
+<%= javascript_include_tag 'site/lot_locations_window.js' %>
+<%= javascript_include_tag 'site/lot_locations_tree.js' %>
+
+<%= stylesheet_link_tag    'datepicker.css'%>
+
+<%= javascript_include_tag 'datepicker-lang/ru.js'%>
+<%= javascript_include_tag 'datepicker.js'%>
+<% end %>  

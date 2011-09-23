@@ -1,0 +1,26 @@
+<table class="lots-list">
+<tr>
+  <th class="name">Nickname</th>
+  <th class="name">Name</th>
+  
+  <th class="event">Goals</th>
+  <th class="event">Assists</th>
+  <th class="event">G + A</th>
+</tr>
+
+<% users.each do |user| %>
+  <tr>
+    <td><%= user.nick %></td>
+    <td><%= user.name1 %> <%= user.name2 %></td>
+    
+    <td><%= user.totgoal %></td>
+     <td><%= user.totassi %></td>
+     <td><%= user.totga %></td>
+
+  
+  </tr>
+<% end %>
+
+
+
+</table>

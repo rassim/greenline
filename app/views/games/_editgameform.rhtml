@@ -1,0 +1,87 @@
+ <% form_tag( :controller => 'games', :action => 'update', :id => game.id  ) do %>
+
+  <div>
+
+  <label>Game date</label>
+  <%= text_field 'lot', 'gamedate',
+            :value => game_date(Time.now),    :class => 'short-input' %>
+
+  
+  <label>Team 1</label>
+  <%= text_field 'lot', 'team1_id', :id=>'team1_id', :value=>game.team1_id, :class => 'short-input'%>
+  
+  <label>Team 2</label>
+  <%= text_field 'lot', 'team2_id', :id=>'team2_id', :value=>game.team2_id, :class => 'short-input'%>
+
+
+   <label>Team1 final score</label>
+  <%= text_field 'lot', 'final_score1', :id=>'final_score1', :value=>game.final_score1, :class => 'short-input'%>
+
+  <label>Team2 final score</label>
+  <%= text_field 'lot', 'final_score2', :id=>'final_score2', :value=>game.final_score2, :class => 'short-input'%>
+
+     <label>Team1 half score</label>
+  <%= text_field 'lot', 'half_score1', :id=>'hals_score1', :value=>game.half_score1, :class => 'short-input'%>
+
+  <label>Team2 half score</label>
+  <%= text_field 'lot', 'half_score2', :id=>'half_score2', :value=>game.half_score2, :class => 'short-input'%>
+
+
+  <br /><br />
+  </div>
+
+  <br />
+
+  <label>Special Game: </label>
+  <%= check_box 'lot', 'special', :value=>game.special %>
+
+  <br />
+
+  <label>Optional Game info</label>
+  <%= text_area 'lot', 'info', :class=> 'long-input', :value=>game.info %>
+  <br />
+
+  <label>Game done: </label>
+  <%= check_box 'lot', 'done', :checked=>game.done %>
+
+  <br/><br/><br/>
+  <%= submit_tag 'Update Game', :class => 'button' %>
+<% end %>
+
+  
+<script type="text/javascript">
+
+    function defineMetrics(zvalue) {
+
+      if(zvalue == "item3" || zvalue=="item4") {
+          //alert("pull-down selection changed..."+zvalue);
+          addDiv();
+      }
+    }
+
+    function addDiv() {
+
+         alert(" function addDiv...");
+
+          var new_div = document.createElement("div");
+          new_div.setAttribute("id", "new_div");
+          var new_input = document.createElement("input");
+          new_input.setAttribute("type", "text");
+          new_input.setAttribute("id", "evalue");
+
+          var name_text = document.createTextNode("Define new metrics");
+
+          new_div.appendChild(new_input);
+          new_div.appendChild(name_text);
+          new_div.appendChild(document.createElement("br"));
+
+          var the_form = document.getElementById("new-lot-form");
+          var the_element = document.getElementById("price");
+
+          var zzz = the_form.toString();
+            alert(" function addDiv 2: "+zzz);
+
+          the_form.insertBefore(new_div, the_element);
+    }
+
+</script>

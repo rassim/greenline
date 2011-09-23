@@ -1,0 +1,33 @@
+<html>
+<head>
+  <%= javascript_include_tag 'prototype'%>
+  <%= javascript_include_tag 'effects'%>
+  <%= javascript_include_tag 'dragdrop'%>
+  <%= javascript_include_tag 'controls'%>
+  
+  <%= javascript_include_tag "/extjs/adapter/prototype/ext-prototype-adapter.js"%>
+  <%= javascript_include_tag "/extjs/ext-all.js" %>
+
+  <%= stylesheet_link_tag    "/extjs/resources/css/ext-all.css" %>
+
+
+  <%= stylesheet_link_tag    'datepicker.css'%>
+
+<%= javascript_include_tag 'datepicker-lang/ru.js'%>
+<%= javascript_include_tag 'datepicker.js'%>
+
+    
+  <%= yield :header %>
+</head>  
+<body>
+  
+  <div id="sidebar"><%= yield :sidebar %></div>
+  <div id="content"><%= yield :content %></div>
+  
+  <script type="text/javascript">
+    var controllerInfo = <%= @controller_info.to_json %>;
+  </script>
+
+  <%= yield :javascript %>
+</body>
+</html>

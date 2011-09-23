@@ -1,0 +1,18 @@
+<% content_for :content do %>
+
+  <h2>
+    Game:<%=  @game.id %> registration page
+    <br />
+    Game date: <%=  @game.gamedate %>
+    <br />
+  </h2>
+  <br /><br />
+
+  <%= render :partial => 'shared/registration_list', :locals => { :registr => @registr1, :game => @game}%>
+<br /><br />
+<%= render :partial => 'shared/registration_list', :locals => { :registr => @registr2, :game => @game}%>
+  
+  <br /><br />
+  <%= link_to 'Please use this link to register for the game', :controller => 'games', :action => 'registerplayer', :gameid => @game.id %>
+
+<% end %>

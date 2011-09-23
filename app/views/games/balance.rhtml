@@ -1,0 +1,13 @@
+<% content_for :content do %>
+
+  <h2>
+    Teams balance for the Game:<%=  @game.id %>
+    <br />
+    Game date: <%=  @game.gamedate %>
+    <br />
+  </h2>
+  <br /><br />
+
+  <%= render :partial => 'shared/ustats', :locals => { :registr => @registr, :game => @game, :users =>@users}%>
+
+<% end %>

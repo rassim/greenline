@@ -1,0 +1,6 @@
+<div id="menu">
+  <ul>
+    <li <%= @section == 'main'     ? 'class="active"' : '' %>><%= link_to 'Main', root_url %></li>
+    <li <%= @section == 'about'    ? 'class="active"' : '' %>><%= link_to 'About', :controller => 'articles', :action => 'about'%></li>
+  </ul>
+</div>

@@ -1,0 +1,7 @@
+<% content_for :content do %>
+
+  <h2>All teams</h2>
+  <br />
+  <%= render :partial => 'shared/teams_list', :locals => { :teams => @teams}%>
+  
+<% end %>

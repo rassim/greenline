@@ -1,0 +1,31 @@
+<table class="lots-list">
+<tr>
+  <th class="name">Player</th>
+  <th class="name">Name</th>
+  <th class="location">Phone</th>
+  <th class="name">Statistics (G+A)</th>
+  <th class="name">Team</th>
+  <th class="location">Actions</th>
+</tr>
+
+<% registr.each do |reg| %>
+<tr>
+  <td><%= reg.user.nick %></td>
+  <td><%=  reg.user.name1 %>  <%=  reg.user.name2 %></td>
+  <td><%= reg.user.phone %></td>
+  <td><%= reg.user.totga %></td>
+  <td><%= reg.team.name %></td>
+  
+  <td class="action">
+    <%= link_to 'Change team', :controller => 'games', :action => 'change_team', :id => game.id, :uid => reg.user.id %>
+    ...
+    <%= link_to 'Cancel', :controller => 'games', :action => 'cancel_reg', :id => game.id, :rid => reg.id %>
+  </td>
+
+  
+</tr>
+<% end %>
+
+
+
+</table>

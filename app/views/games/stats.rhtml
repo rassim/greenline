@@ -1,0 +1,7 @@
+<% content_for :content do %>
+
+  <h2>Personal statistics</h2>
+  <br />
+  <%= render :partial => 'shared/ustats', :locals => { :users => @users}%>
+  
+<% end %>

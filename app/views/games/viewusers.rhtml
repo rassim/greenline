@@ -1,0 +1,7 @@
+<% content_for :content do %>
+
+  <h2>Personal information</h2>
+  <br />
+  <%= render :partial => 'shared/users_list', :locals => { :users => @users}%>
+  
+<% end %>
